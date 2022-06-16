@@ -20,7 +20,7 @@ CURL* checkServer() {
 	CURL* curl = curl_easy_init();										// начинает easy(простую) curl-сессию, возвращает её дескриптор, в случае неудачи NULL.
 	if (curl) {															// та самая проверка на NULL
 		curl_easy_setopt(curl, CURLOPT_URL, url);						// задаём url сервера с которым и будем работать
-		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, getResponseData);	// обратный вызов функции getResponseData для записи полученного ответа от сервера
+		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, getResponseData);	// вызов функции getResponseData для записи полученного ответа от сервера
 		if (curl_easy_perform(curl)) {									// если curl_easy_perform(curl) возфращает 0, то соединение прошло удачно
 			printf("Проверьте подключение к интернету!\n");
 		}

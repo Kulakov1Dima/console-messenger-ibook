@@ -59,16 +59,17 @@ void get_list_file() {													// получение списка файлов
 
 	use_Unicode;
 	printf(gethistory);
-
 	if (hf != INVALID_HANDLE_VALUE) {
 		do {
 			printf("%s  ", FindFileData.cFileName);
 		} while (FindNextFileA(hf, &FindFileData));
 		FindClose(hf);
 	}
-	printf("\n¬ведите интересуемое им€ чата:\n");
+	printf("\n¬ведите интересуемое им€ чата или cancel - дл€ отмены:\n");
 	char file[17];
 	scanf("%s", file);
-	readMessages(file);
+	if (strcmp(file, (char*)"cancel")) {
+		readMessages(file);
+	}
 }
 
