@@ -1,4 +1,6 @@
-﻿  Messanger.cpp
+﻿  CheckServer.cpp
+  File_manager.cpp
+  Messanger.cpp
   ibook.cpp
 C:\Users\Dima\source\repos\ibook\ibook\ibook.cpp(64,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
   Создание кода...
